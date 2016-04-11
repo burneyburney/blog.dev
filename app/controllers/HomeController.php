@@ -15,9 +15,25 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
+	public function showWelcome(){
 		return View::make('hello');
+	}
+	public function showResume(){
+		return View::make('resume');
+	}
+	public function showPortfolio(){
+		return View::make('portfolio');
+	}
+	public function showRollDice(){
+		// $randomNumber = mt_rand(1,6);
+		// $cast = $randomNumber . '!';
+		// $URL = $_SERVER['REQUEST_URI'];
+		return View::make('roll-dice')->with($data);
+	}
+
+	public function randomGuess(){
+		$guess = mt_rand(1,6);
+		return Redirect::action('HomeController@showRollDice', $guess);
 	}
 
 }
