@@ -7,10 +7,11 @@ class PostsController extends BaseController {
         return View::make('posts.index');
     }
     public function create(){
-        return 'showing create';
+        // return 'showing create';
+        return View::make('posts.create');
     }
     public function store(){
-        return Redirect::action('PostsController@store')->withInput();
+        return Redirect::back()->withInput();
     }
     public function show(){
         return 'showing show';

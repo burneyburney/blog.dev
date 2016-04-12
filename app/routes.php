@@ -21,7 +21,7 @@ Route::get('/whackamole', 'HomeController@showWhackamole');
 // did this in class instead of using the ONE line
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/create','PostsController@create');
-Route::get('/posts/store','PostsController@store');
+Route::post('/posts/store','PostsController@store');
 
 Route::get('/posts/{post}','PostsController@show');
 Route::get('/posts/{post}/edit','PostsController@edit');
