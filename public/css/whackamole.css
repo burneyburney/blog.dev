@@ -1,0 +1,84 @@
+.down{
+	opacity: .2;
+}
+#box3 {
+	clear: left;
+}
+#box6{
+	clear: left;
+}
+
+/*#mole0, #mole1, #mole2, #mole3, #mole4, #mole5, #mole6, #mole7, #mole8*/
+.mole {
+	background-image: url(pinkmonster.jpg);
+  	background-repeat: no-repeat;
+  	background-position: 50% 50%;
+  /* put the height and width of your image here */
+  	height: 173px;
+  	width: 173px;
+  	background-position: center;
+  	border: none;
+
+	left: 1px;
+	top: 1px;
+	float:left;
+	margin: 7px;
+	transition: all 0.7s;
+	opacity: .0;
+}
+
+#mole3{
+	clear:left;
+}
+#mole6{
+	clear: left;
+}
+
+.wrapper{
+	margin: 0 auto;
+	margin-left: 10%;
+	margin-top: 3%;
+	margin-right: 0% auto;
+	text-align: center;
+}
+
+h1{
+	margin: 0 auto;
+	text-align: center;
+}
+h4{
+	margin: 0 auto;
+	text-align: center;
+}
+/*buttons opacity dims when hovered*/
+/*#mole0:hover, #mole1:hover, #mole2:hover, #mole3:hover, #mole4:hover, #mole5:hover, #mole6:hover, #mole7:hover, #mole8:hover{
+	opacity: .0;*/
+
+.start{
+	background-color: lightgoldenrodyellow;
+	height: 500px;
+	width: 70px;
+	border: solid black 2px;
+	clear:left;
+	margin: 1px;
+	transition: all 1s;
+
+}
+.start:hover{
+	opacity: .5;
+}
+.start:active{
+	background-color: ghostwhite;
+}
+/*if mole has class "up" then opacity is 1*/
+.up{
+	opacity: 1;
+}
+
+/*buttons turn ghost white when clicked*/
+#mole0:active, #mole1:active, #mole2:active, #mole3:active, #mole4:active, #mole5:active, #mole6:active, #mole7:active, #mole8:active{
+	background-color: ghostwhite;
+}
+.up:active{
+	background-color: ghostwhite;
+}
