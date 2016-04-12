@@ -2,14 +2,26 @@
 
 class PostsController extends BaseController {
 
-    public function showPosts(){
-        return 'show all posts';
+    public function index(){
+        // posts folder / index file
+        return View::make('posts.index');
     }
-
-    // public function showIndex(){
-    //     View::make('posts/index');
-    // }
-
-
-
+    public function create(){
+        return 'showing create';
+    }
+    public function store(){
+        return Redirect::action('PostsController@store')->withInput();
+    }
+    public function show(){
+        return 'showing show';
+    }
+    public function edit(){
+        return 'showing edit';
+    }
+    public function update(){
+        return 'showing update';
+    }
+    public function destroy(){
+        return 'showing destroy';
+    }
 }
