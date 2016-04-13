@@ -1,12 +1,23 @@
 <!-- index.blade.php -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>index.blade.php</title>
-    </head>
-    <body>
-        <h1> all posts </h1>
-        <a href="{{{ action('PostsController@show', ['post' => 1]) }}}"> Read more </a>
-    </body>
-</html>
+
+@extends('layouts.master')
+
+@section('content')
+    <h1> All posts </h1>
+
+    @foreach($posts as $post)
+        <h2> {{{ $post->title }}}</h2>
+        <p> {{{ $post->body }}}</p>
+
+        <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}"> Read more</a>
+
+    @endforeach
+
+    <p>
+
+        <br>
+        <a href="{{{ action('PostsController@create' )}}}">
+            Create a new one
+        </a>
+    </p>
+@stop

@@ -33,10 +33,4 @@ class CreatePostsTable extends Migration {
 
 }
 
-
-
-
-
-
-
 // <!-- php artisan migrate:make create_posts_table --create=posts -->

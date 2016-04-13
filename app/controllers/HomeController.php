@@ -39,5 +39,4 @@ class HomeController extends BaseController {
 		$guess = mt_rand(1,6);
 		return Redirect::action('HomeController@showRollDice', $guess);
 	}
-
 }

@@ -4,7 +4,9 @@ class PostsController extends BaseController {
 
     public function index(){
         // posts folder / index file
-        return View::make('posts.index');
+        return View::make('posts.index', [
+            'posts' => Post::all()
+        ]);
     }
     public function create(){
         // return 'showing create';
@@ -13,8 +15,10 @@ class PostsController extends BaseController {
     public function store(){
         return Redirect::back()->withInput();
     }
-    public function show(){
-        return 'showing show';
+    public function show($id){
+        return View::make('posts.show', [
+        'post' => Post::find($id),
+        ]);
     }
     public function edit(){
         return 'showing edit';
