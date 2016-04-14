@@ -2,41 +2,78 @@
 
 class PostsController extends BaseController {
 
-    public function index(){
+    public function index()
+    {
         $posts = Post::paginate(4);
-        return View::make('posts.index')->with(array('posts' => $posts));
+        // generally have same name, if KEY is posts... then VAR is $posts...
+        return View::make('posts.index')->with('posts', $posts);
     }
-    public function create(){
-        // return 'showing create';
+
+    public function create()
+    {
+        // bring up a form
         return View::make('posts.create');
     }
-    public function store(){
-        // create the validator
+
+    public function store()
+    {
+        return $this->validateAndSave();
+        // return Redirect::action('PostsController', $post->index);
+    }
+    // i made
+    // return Redirect::back()->withInput();
+
+    public function show($id)
+    {
+        return View::make('posts.show', [
+        // send data into the view
+        // show a single page
+        'post' => Post::find($id),
+        ]);
+    }
+
+    // edit this
+    public function edit($id)
+    {
+        // goes to edit file
+        $post = post::fine($id);
+        return View::make('posts.edit')->make();
+    }
+    public function update()
+    {
+
+    }
+    public function destroy($id) #good
+    {
+        $post = Post::find($id);
+
+        if($post) {
+            $post->delete();
+        }
+        return Redirect::action('PostsController@index');
+    }
+
+        //  keep code dry, use this function
+    public function validateAndSave() #good
+    {
+        // copy and pasted from store
         $validator = Validator::make(Input::all(), Post::$rules);
         // attempt validation
         if ($validator->fails()) {
             // validation failed, redirect to the post create page with validation errors and old inputs
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
-            // validation succeeded, create and save the post
+            $post = new Post();
+            $post->title = input::get('title');
+            $post->body = input::get('body');
+            $post->save();
+
         }
-    }
-    // i made
-    // return Redirect::back()->withInput();
-    public function show($id){
-        return View::make('posts.show', [
-        'post' => Post::find($id),
-        ]);
-    }
-    public function edit($id){
-        $post = Post::fine($id);
-        // go to edit file
-        return View::make('posts.edit')->make();
-    }
-    public function update(){
-        return 'showing update';
-    }
-    public function destroy(){
-        return 'showing destroy';
+
+        return Redirect::action('PostsController@index');
     }
 }
+    // pascal sent me this
+    // {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
+    // {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+    // {{ Form::close() }}

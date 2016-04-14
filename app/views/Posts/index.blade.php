@@ -9,7 +9,7 @@
         <h2> {{{ $post->title }}}</h2>
         <p> {{{ $post->body }}}</p>
 
-        <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}"> Read more</a>
+        <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}"> {{{ $post->title }}}</a>
 
     @endforeach
 

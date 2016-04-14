@@ -9,7 +9,7 @@
 </form> -->
 
 @stop
-<form method="post" action="{{{ action('PostsController@store') }}}">
+{{ Form::open(array('action' => 'PostsController@store')) }}
 <div class="form group">
     <label for="title"> TITLE </label>
     <input
@@ -37,4 +37,3 @@
         '<span style="color:red">:message</span>'
         ) }}</p>
 @endif
-</form>
