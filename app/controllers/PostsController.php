@@ -43,7 +43,7 @@ class PostsController extends BaseController {
     {
 
     }
-    public function destroy($id) #good
+    public function destroy($id)
     {
         $post = Post::find($id);
 
