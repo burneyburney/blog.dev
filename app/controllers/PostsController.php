@@ -10,7 +10,6 @@ class PostsController extends BaseController {
         // return 'showing create';
         return View::make('posts.create');
     }
-
     public function store(){
         // create the validator
         $validator = Validator::make(Input::all(), Post::$rules);
@@ -29,8 +28,10 @@ class PostsController extends BaseController {
         'post' => Post::find($id),
         ]);
     }
-    public function edit(){
-        return 'showing edit';
+    public function edit($id){
+        $post = Post::fine($id);
+        // go to edit file
+        return View::make('posts.edit')->make();
     }
     public function update(){
         return 'showing update';
