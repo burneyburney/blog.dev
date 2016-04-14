@@ -32,7 +32,7 @@ class PostsController extends BaseController {
         ]);
     }
 
-    // edit this
+
     public function edit($id)
     {
         // goes to edit file
