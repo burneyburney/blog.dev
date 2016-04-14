@@ -9,6 +9,7 @@ class Post extends Eloquent{
         'body' => 'required|max:10000'
     ];
 
-    protected $table = 'posts';
+    protected $table = 'posts'; table: "posts"
+    public function getCreatedAtAttribute($value) $value: "2016"
 
 }
