@@ -47,16 +47,18 @@ class PostsController extends BaseController {
     {
         $post = Post::find($id);
 
-        if($post) {
-            $post->delete();
+        if(!$post) {
+            Session::flash('errorMessage', 'Post was not found');
+            return Redirect::action('PostsController@index');
         }
+        $post->delete();
+        Session::flash('successMessage', 'The post was successfully deleted');
         return Redirect::action('PostsController@index');
     }
 
-        //  keep code dry, use this function
-    public function validateAndSave() #good
+    //  keep code dry, use this function
+    public function validateAndSave()
     {
-        // copy and pasted from store
         $validator = Validator::make(Input::all(), Post::$rules);
         // attempt validation
         if ($validator->fails()) {
@@ -69,7 +71,7 @@ class PostsController extends BaseController {
             $post->save();
 
         }
-
+        Session::flash('successMessage', 'The post was successfully added!');
         return Redirect::action('PostsController@index');
     }
 }

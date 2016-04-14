@@ -6,10 +6,10 @@
     <h1> All posts </h1>
 
     @foreach($posts as $post)
-        <h2> {{{ $post->title }}}</h2>
-        <p> {{{ $post->body }}}</p>
+        <!-- <h2> {{{ $post->title }}}</h2> -->
 
-        <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}"> {{{ $post->title }}}</a>
+        <h2><a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}"> {{{ $post->title }}}</a> </h2>
+        <p> {{{ $post->body }}}</p>
 
     @endforeach
 
