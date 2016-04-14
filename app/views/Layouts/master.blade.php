@@ -7,14 +7,18 @@
         <title>title</title>
         <!--  foundation cdn -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.css">
+        @yield('top-script')
     </head>
     <body>
         @if (Session::has('successMessage'))
-            <div class="alert alert-success"> {{{ Session::get('successMessage')}}} </div>
+            <div data-alert class="alert-box">
+                {{{ Session::get('successMessage')}}}
+                <a href="#" class="close">&times;</a>
+            </div>
         @endif
         <main class="container">
             @yield('content')
         </main>
-
+        @yield('bottom-script')
     </body>
 </html>
