@@ -1,7 +1,9 @@
 <?php
 
 class PostsTableSeeder extends Seeder{
+
     public function run(){
+                
         $post = new Post();
         $post->title = 'hello world!';
         $post->body = 'Building Site..';
