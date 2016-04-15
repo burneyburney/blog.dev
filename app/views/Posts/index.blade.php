@@ -23,4 +23,6 @@
             Create a new one
         </a>
     </p>
+    {{ $posts->links() }}
+
 @stop

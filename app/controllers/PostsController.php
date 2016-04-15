@@ -1,10 +1,15 @@
 <?php
 
 class PostsController extends BaseController {
+    // i have a beore
+    public function __contruct()
+    {
+        $this->beforeFilter('auth', array('except' => array('index', 'show')));
+    }
 
     public function index()
     {
-        $posts = Post::paginate(88);
+        $posts = Post::paginate(4);
         // generally have same name, if KEY is posts... then VAR is $posts...
         return View::make('posts.index')->with('posts', $posts);
     }
