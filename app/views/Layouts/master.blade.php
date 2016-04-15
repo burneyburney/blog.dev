@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <title>title</title>
         <!--  foundation cdn -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.css">
         <!--  external css-->
         <link rel="stylesheet" type="text/css" href="/css/myStyle.css">
         @yield('top-script')
