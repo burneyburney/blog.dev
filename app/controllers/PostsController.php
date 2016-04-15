@@ -66,6 +66,7 @@ class PostsController extends BaseController {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
             $post = new Post();
+            $post->user_id = User::first()->id;
             $post->title = input::get('title');
             $post->body = input::get('body');
             $post->save();
