@@ -66,9 +66,10 @@ class PostsController extends BaseController {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
             $post = new Post();
-            $post->user_id = User::first()->id;
             $post->title = input::get('title');
             $post->body = input::get('body');
+            // $post->user_id = Auth::id();
+            $post->user_id = User::first()->id;
             $post->save();
 
         }
@@ -80,3 +81,8 @@ class PostsController extends BaseController {
     // {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
     // {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
     // {{ Form::close() }}
+
+
+    // same as SELECT * FROM USERS in db (done in php artisan tinker)
+    // 7] > foreach($user->posts as $post){
+    // [7] *> echo $post->title;}
