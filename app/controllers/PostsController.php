@@ -9,9 +9,17 @@ class PostsController extends BaseController {
 
     public function index()
     {
-        $posts = Post::paginate(4);
+        $posts = Post::paginate(6);
         // generally have same name, if KEY is posts... then VAR is $posts...
         return View::make('posts.index')->with('posts', $posts);
+
+        $search = Input::get('search');
+        if (is_null($search))
+        {
+            $posts = Post::with('User')->orderBy('created_at', 'desc')->paginate(4);
+        }else{
+        
+        }
     }
 
     public function create()

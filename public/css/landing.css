@@ -1,0 +1,49 @@
+html {
+	font-family: "proxima-nova-soft",sans-serif;
+	background-color: #34314c;
+}
+.title{
+	text-align: center;
+}
+.post {
+  width: 50%;
+  float: left;
+  min-height: 400px;
+  color: #FFFFFF;
+  display: flex;
+  transition: background .4s ease-in-out;
+  align-content: space-between;
+}
+
+.grey {
+  background: #2b2b2b;
+}
+.grey .post_info .date {
+  color: #51967B;
+}
+.grey .post_info .read_length {
+  color: #94DFC2;
+}
+.grey:hover {
+  background: #34314c;
+}
+
+.superSmall{
+	font-size: .7rem;	
+}
+
+.post .inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 15%;
+}
+.post .title {
+  font-size: 1.75em;
+}
+.post .post_info .date, .post .post_info .read_length {
+  display: inline;
+  font-size: 1.1em;
+}
+.post .post_info .date {
+  margin-right: 1em;
+}
