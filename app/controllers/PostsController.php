@@ -9,9 +9,12 @@ class PostsController extends BaseController {
 
     public function index()
     {
-        $posts = Post::paginate(6);
+        $posts = Post::paginate(12);
+
+        $colors = ['red', 'green', 'purple', 'lime_green', 'pink', 'orange', 'yellow', 'blue'];
+
         // generally have same name, if KEY is posts... then VAR is $posts...
-        return View::make('posts.index')->with('posts', $posts);
+        return View::make('posts.index')->with(['posts' => $posts, 'colors' => $colors]);
 
         $search = Input::get('search');
         if (is_null($search))
