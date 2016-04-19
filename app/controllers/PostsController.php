@@ -9,7 +9,7 @@ class PostsController extends BaseController {
 
     public function index()
     {
-        $posts = Post::paginate(12);
+        $posts = Post::paginate(32);
 
         $colors = ['red', 'green', 'purple', 'lime_green', 'pink', 'orange', 'yellow', 'blue'];
 

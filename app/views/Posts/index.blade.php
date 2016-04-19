@@ -4,12 +4,20 @@
 
 @section('content')
 
-<!-- <div class="grey"> -->
-<!-- <img> -->
-<!-- <div class="leftIT">hi</div> -->
+<div class="white">
+  <div class="leftIMG">
+    <img src="/img/burneyAvatarNEW.png" alt="img of me 8)"/>
+  </div>
+  <div class="rightSTUFF">
+  test button
+  <button>test me </button>
+  <button> NO NO  me </button>
+  </div>
+
+</div>
 <!-- <2 cols> -->
 <!-- <div class="rightIT">link</div> -->
-<!-- </div> -->
+
 
     @foreach($posts as $index => $post)
 
