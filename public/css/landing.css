@@ -14,7 +14,6 @@ html {
   display: flex;
   transition: background .4s ease-in-out;
   vertical-align: middle;
-
 }
 
 .grey {
@@ -27,8 +26,7 @@ html {
 }
 .grey .post_info .read_length {
   color: #94DFC2;
-  vertical-align: middle;
-
+  vertical-align: middle
 }
 
 .superSmall{
@@ -37,8 +35,8 @@ html {
 
 .post .inner {
   display: table-cell;
-  vertical-align: middle;
   padding: 15%;
+  vertical-align: middle;
 }
 .post .title {
   font-size: 1.75em;
@@ -190,6 +188,3 @@ html {
     font-size: .9em;
   }
 }
-
-/*limit text on home page*/
-/*change classes in for each*/

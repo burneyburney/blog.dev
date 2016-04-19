@@ -4,14 +4,12 @@
 
 @section('content')
 
-<!--     <h1 class="title"> TEST ! BURNEY'S B<span class="superSmall">o</span>LOG<span class="superSmall">na</span> TESTING</h1>
- -->
-<div class="grey">
+<!-- <div class="grey"> -->
 <!-- <img> -->
-<div class="leftIT">hi</div>
+<!-- <div class="leftIT">hi</div> -->
 <!-- <2 cols> -->
-<div class="rightIT">link</div>
-</div>
+<!-- <div class="rightIT">link</div> -->
+<!-- </div> -->
 
     @foreach($posts as $index => $post)
 
