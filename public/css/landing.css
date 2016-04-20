@@ -4,7 +4,7 @@ html {
 }
 .title{
 	text-align: center;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 }
 .post {
   width: 50%;
@@ -13,7 +13,7 @@ html {
   color: #FFFFFF;
   /*display: flex;*/
   transition: background .4s ease-in-out;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   margin: auto;
 }
 
@@ -29,12 +29,11 @@ html {
 }
 .white .post_info .date {
   color: #51967B;
-  vertical-align: middle;
 
 }
 .white .post_info .read_length {
   color: #94DFC2;
-  vertical-align: middle
+  /*vertical-align: middle*/
 }
 
 .superSmall{
@@ -48,12 +47,12 @@ html {
 }
 .post .title {
   font-size: 1.75em;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 .post .post_info .date, .post .post_info .read_length {
   display: inline;
   font-size: 1.1em;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 
 }
 .post .post_info .date {

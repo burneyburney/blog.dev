@@ -20,7 +20,7 @@
 
 
     @foreach($posts as $index => $post)
-
+        <div class="outer">
          <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}">
             <div class="inner">
             <!-- 7 colors used, make sure you dont foreach past that -->
@@ -36,6 +36,8 @@
     <p>
 
         <br>
+
+          <!-- if you find this button i WANT YOU TO MAKE A BLOG POST! You're the type of person that I'm interested in!-->
 <!--             <a href="{{{ action('PostsController@create' )}}}">
               Create a new one
             </a> -->
