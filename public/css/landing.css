@@ -25,6 +25,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .white .post_info .date {
   color: #51967B;
@@ -180,7 +181,8 @@ html {
     width: 33.3333%;
   }
 }
-@media only screen and (max-width: 850px) {
+
+@media only screen and (max-width: 950px) {
   .post .inner {
     padding: 0 7.5%;
   }
@@ -191,7 +193,7 @@ html {
     font-size: 1em;
   }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
   .post {
     width: 100%;
     min-height: 300px;

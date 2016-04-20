@@ -8,10 +8,10 @@
   <div class="leftIMG">
     <img src="/img/burneyAvatarNEW.png" alt="img of me 8)"/>
   </div>
-  <div class="rightSTUFF">
+<!--   <div class="rightSTUFF">
   test button
   <button>test me </button>
-  <button> NO NO  me </button>
+  <button> NO NO  me </button> -->
   </div>
 
 </div>
