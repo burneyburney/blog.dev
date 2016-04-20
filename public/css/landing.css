@@ -11,7 +11,7 @@ html {
   float: left;
   min-height: 400px;
   color: #FFFFFF;
-  display: flex;
+  /*display: flex;*/
   transition: background .4s ease-in-out;
   vertical-align: middle;
   margin: auto;

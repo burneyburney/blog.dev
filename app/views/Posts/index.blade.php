@@ -36,9 +36,9 @@
     <p>
 
         <br>
-        <a href="{{{ action('PostsController@create' )}}}">
-            Create a new one
-        </a>
+<!--             <a href="{{{ action('PostsController@create' )}}}">
+              Create a new one
+            </a> -->
     </p>
     {{ $posts->links() }}
 
