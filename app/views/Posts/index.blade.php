@@ -18,7 +18,6 @@
 <!-- <2 cols> -->
 <!-- <div class="rightIT">link</div> -->
 
-
     @foreach($posts as $index => $post)
         <div class="outer">
          <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}">
@@ -38,10 +37,10 @@
         <br>
 
           <!-- if you find this button i WANT YOU TO MAKE A BLOG POST! You're the type of person that I'm interested in!-->
-<!--             <a href="{{{ action('PostsController@create' )}}}">
+  <a href="{{{ action('PostsController@create' )}}}">
               Create a new one
-            </a> -->
-    </p>
+            </a> 
+    </p> 
     {{ $posts->links() }}
 
 @stop

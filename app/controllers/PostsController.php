@@ -29,6 +29,7 @@ class PostsController extends BaseController {
     {
         // bring up a form
         return View::make('posts.create');
+        // return Redirect::action('PostsController@index');
     }
 
     public function store()

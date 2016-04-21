@@ -7,6 +7,8 @@
         <title>Burney's Blog</title>
         <!--  external css-->
         <link rel="stylesheet" type="text/css" href="./css/landing.css">
+        <!-- cdn for Disqus -->
+        <script id="dsq-count-scr" src="//michaelburneysblog.disqus.com/count.js" async></script>
         @yield('top-script')
     </head>
     <body>

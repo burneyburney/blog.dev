@@ -14,7 +14,9 @@ class Post extends Eloquent{
             return $this->belongsTo('User');
     }
 
+
     // protected $table = 'posts'; table: "posts"
     // public function getCreatedAtAttribute($value) $value: "2015"
 
 }
+

@@ -8,13 +8,21 @@
     <button type="submit"> THROW IT! </button>
 </form> -->
 
+
+    <!-- tinymce -->
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+
+
+
+
 @stop
 {{ Form::open(array('action' => 'PostsController@store')) }}
 <div class="form group">
     <label for="title"> TITLE </label>
     <input
         type="text"
-        clss="form-control"
+        class="form-control"
         id="title" name="title"
         value="{{{ Input::old('title') }}}">
 </div>
