@@ -1,8 +1,9 @@
 <!-- resume.blade.php -->
 @extends('layouts.master')
 @section('content')
-    <p> This is my resume </p>
-    <!-- <a href="#"> {{{ action('HomeController@showResume') }}}</a> resume page -->
-    <a href="{{{ action('HomeController@showPortfolio')}}}"> PORTFOLIO LINK </a>
+
+<h1>my resume</h1>
+
+
 
 @stop

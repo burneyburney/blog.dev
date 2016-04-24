@@ -90,7 +90,7 @@ class PostsController extends BaseController {
             $post->save();
 
         }
-        Session::flash('successMessage', 'The post was successfully added!');
+        // Session::flash('successMessage', 'The post was successfully added!');
         return Redirect::action('PostsController@index');
     }
 }

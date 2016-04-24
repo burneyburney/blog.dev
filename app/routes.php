@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'PostsController@index');
 Route::get('/resume', 'HomeController@showResume');
 Route::get('/portfolio', 'HomeController@showPortfolio');
 Route::get('/rollDice/{guess}', 'HomeController@showRollDice');

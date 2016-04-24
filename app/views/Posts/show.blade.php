@@ -5,18 +5,22 @@
 	html{
 		background-color: ghostwhite;
 		font-family: "proxima-nova-soft",sans-serif;
-
+	}
+	.wrap{
+		background-color: red;
 	}
 </style>
 
 @stop
 @section('content')
-    <h1>{{{ $post->title }}} </h1>
-    <p> {{ $post->body}}</p>
-    	<!-- time -->
-    <p> {{{  $post->created_at->format('l, F jS Y @ h:i:s A') }}} </p>
+	<div class="wrap">
+    	<h1>{{{ $post->title }}} </h1>
+    	<p> {{ $post->body}}</p>
+	    	<!-- time -->
+    	<p> {{{  $post->created_at->format('l, F jS Y @ h:i:s A') }}} </p>
 
-    <p>Written by {{{ $post->user->first_name }}} </p>
+	    <p>Written by {{{ $post->user->first_name }}} </p>
+	</div>
 
 
 

@@ -17,7 +17,6 @@
 </div>
 <!-- <2 cols> -->
 <!-- <div class="rightIT">link</div> -->
-
     @foreach($posts as $index => $post)
         <div class="outer">
          <a href="{{{ action('PostsController@show', ['post' => $post->id ])}}}">
@@ -30,6 +29,7 @@
             </div>
           </div>
         </a>
+    
     @endforeach
 
     <p>

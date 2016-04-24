@@ -2,19 +2,30 @@ html {
 	font-family: "proxima-nova-soft",sans-serif;
 	background-color: white;
 }
+body{
+  vertical-align: middle;
+}
+a{
+  vertical-align: middle;
+}
 .title{
 	text-align: center;
 	/*vertical-align: middle;*/
 }
+.outer{
+  vertical-align: middle;
+}
 .post {
   width: 50%;
   float: left;
+  
   min-height: 400px;
   color: #FFFFFF;
   /*display: flex;*/
   transition: background .4s ease-in-out;
-  /*vertical-align: middle;*/
+  vertical-align: middle;
   margin: auto;
+  text-align: center;
 }
 
 .white {
