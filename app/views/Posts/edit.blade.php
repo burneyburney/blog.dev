@@ -1,5 +1,4 @@
 <!-- edit.blade.php -->
-
 @extends('layouts.master')
 
 @section('top-script')
