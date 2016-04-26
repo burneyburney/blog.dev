@@ -2,6 +2,7 @@
 @extends('layouts.master')
 @section('content')
 
+
 <h1>my resume</h1>
 
 
