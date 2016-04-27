@@ -10,6 +10,10 @@
     	width: 50%;
     	padding: 10px;
 	}
+	.info{
+		margin-right: 10%;
+		float: right;
+	}
 </style>
 
 @stop
@@ -17,9 +21,11 @@
 	<div class="wrap">
     	<h1>{{{ $post->title }}} </h1>
     	<p> {{ $post->body}}</p>
-	    	<!-- time -->
-    	<p> {{{  $post->created_at->format('l, F jS Y @ h:i:s A') }}} </p>
+    </div>
 
+    <div class="info">
+    	<!-- time -->
+    	<p> {{{  $post->created_at->format('l, F jS Y @ h:i:s A') }}} </p>
 	    <p>Written by {{{ $post->user->first_name }}} </p>
 	</div>
 
