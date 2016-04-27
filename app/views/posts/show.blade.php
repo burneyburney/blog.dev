@@ -6,7 +6,9 @@
 		font-family: "proxima-nova-soft",sans-serif;
 	}
 	.wrap{
-		background-color: red;
+		margin: auto;
+    	width: 50%;
+    	padding: 10px;
 	}
 </style>
 
