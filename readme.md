@@ -1,3 +1,9 @@
+#this blog.dev directory is currently deployed
+#if you would like to access it the domain is burney.online
+#feel free to poke around on the site. I hope you enjoy!
+
+
+------
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
